@@ -1,17 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function Home() {
   const [menu, setMenu] = useState(false);
-
+  const hamburger = useRef(null);
   const showMenu = (e) => {
-    console.log("here");
     if (menu === false) {
-      e.target.classList.toggle("active");
+      hamburger.current.classList.toggle("active");
       setMenu(true);
     } else {
-      e.target.classList.remove("active");
+      hamburger.current.classList.remove("active");
       setMenu(false);
     }
   };
@@ -280,7 +279,7 @@ export default function Home() {
               </button>
             </div>
             <div className="ml-4 z-[50]">
-              <div className="inline-block mt-1 hamburger" onClick={showMenu}>
+              <div className="inline-block mt-1 hamburger" ref={hamburger} onClick={showMenu}>
                 <div className="w-[25px] h-[2px] bg-white my-2 bar1"></div>
                 <div className="w-[25px] h-[2px] bg-white my-2 bar2"></div>
                 <div className="w-[25px] h-[2px] bg-white my-2 bar3"></div>
