@@ -1,20 +1,75 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState } from "react";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import Card from "../components/card";
+import ImageCard from "../components/imageCard";
+import GainCard from "../components/gainCard";
+import EarnCard from "../components/earnCard";
 
 export default function Home() {
   const [menu, setMenu] = useState(false);
-  const hamburger = useRef(null);
   const showMenu = (e) => {
     if (menu === false) {
-      hamburger.current.classList.toggle("active");
       setMenu(true);
     } else {
-      hamburger.current.classList.remove("active");
       setMenu(false);
     }
   };
-
+  const card_data = [
+    {
+      title: "Multi-chain AMM",
+      content: "The lowest rates for DeFi tokens anywhere. Switch to any blockchains in one click.",
+      btn: "Enter Exchange"
+    },
+    {
+      title: "Grape Lending &amp; Leverage",
+      content: "Isolated lending markets, elastic interest rates,Leverage long short or create your own market.",
+      btn: "Enter Grape"
+    },
+    {
+      title: "Cellar dApps",
+      content: "An innovative ecosystem to use dapps gas-efficiently and gain extra yield. Onchain min dapps.",
+      btn: "Enter Cellar"
+    },
+    {
+      title: "Cristal staking",
+      content: "Earn government rights and 0.05% of all swaps from all chains in one simple place.",
+      btn: "Enter Cellar"
+    },
+    {
+      title: "Champagne Program",
+      content: "Earn Champagne Bottles, once ChampagneSwap reached a marketcap on the coin of 1 Billion, it will create the worlds first DeFi Champagne in Champagne(France)",
+      btn: "Coming Soon"
+    }
+  ]
+  const imagecard_data = [
+    {
+      title: "20+", 
+      content: "Wallet Supported", 
+      content1: "", 
+      src: "/assets/wallet.png"
+    },
+    {
+      title: "14", 
+      content: "Chains Supported", 
+      content1: "(BSC is first)", 
+      src: "/assets/blockchain.png"
+    },
+    {
+      title: "10k+", 
+      content: "Champagne Holders", 
+      content1: "", 
+      src: "/assets/discord.png"
+    },
+    {
+      title: "10k+", 
+      content: "Champagne Holders", 
+      content1: "", 
+      src: "/assets/logo3.png"
+    }
+  ]
   return (
     <div>
       <Head>
@@ -161,133 +216,11 @@ export default function Home() {
               ></path>
             </g>
           </svg>
-          <svg
-            data-v-6104ed00=""
-            id="linkedin"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-labelledby="linkedinTitle"
-            role="img"
-            className="logo-group ml-2"
-          >
-            <title data-v-6104ed00="" id="linkedinTitle">
-              Link to Balancer&apos;s LinkedIn profile
-            </title>{" "}
-            <g data-v-6104ed00="" fillRule="nonzero" fill="none">
-              <path
-                data-v-6104ed00=""
-                d="M16 0C7.163 0 0 7.164 0 16s7.163 16 16 16c8.836 0 16-7.163 16-16 0-8.836-7.164-16-16-16z"
-                className="bg"
-              ></path>{" "}
-              <path
-                data-v-6104ed00=""
-                d="M11.307 23.059H7.622V11.943h3.685V23.06zM9.464 10.425h-.023c-1.237 0-2.037-.854-2.037-1.92 0-1.09.824-1.92 2.085-1.92 1.26 0 2.037.83 2.06 1.92 0 1.066-.8 1.92-2.085 1.92zM24.596 23.06H20.91V17.11c0-1.493-.533-2.513-1.868-2.513-1.017 0-1.623.687-1.89 1.351-.097.238-.121.57-.121.902v6.208h-3.685s.048-10.073 0-11.116h3.685v1.574c.489-.756 1.365-1.835 3.32-1.835 2.426 0 4.244 1.589 4.244 5.003v6.374z"
-                className="logo"
-              ></path>
-            </g>
-          </svg>
-          <svg
-            data-v-2daca3a2=""
-            id="mail"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-labelledby="mailTitle"
-            role="img"
-            className="logo-group"
-          >
-            <title data-v-2daca3a2="" id="mailTitle">
-              Link to Balancer Lab&apos;s contact email address
-            </title>{" "}
-            <g data-v-2daca3a2="" fillRule="nonzero" fill="none">
-              <path
-                data-v-2daca3a2=""
-                d="M16.038 0C7.223 0 .075 7.164.075 16s7.148 16 15.963 16S32 24.836 32 16 24.853 0 16.038 0z"
-                className="bg"
-              ></path>{" "}
-              <path
-                data-v-2daca3a2=""
-                d="M7.347 11.612l8.69 7.06 8.691-7.06v10.584H7.348V11.612zm17.369-1.86l-8.678 7.05-8.68-7.05h17.358z"
-                className="logo"
-              ></path>
-            </g>
-          </svg>
         </div>
       </div>
       <div className="bg-gradient-to-r from-black to-indigo-800">
-        <div className="flex flex-row justify-between p-4 fixed w-full z-[9]">
-          <div className="flex flex-row items-center">
-            <div className="flex justify-center items-center">
-              <div>
-                <Image
-                  src="/assets/logo.png"
-                  alt="Vercel Logo"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <h4 className="mx-1 text-white font-['NexaTextBold']">ChampagneSwap</h4>
-            </div>
-            <div className="flex text-white ml-4 font-['NexaTextBold'] lg:flex hidden">
-              <h6 className="mx-2 text-sm">Swap</h6>
-              <h6 className="mx-2 text-sm">Trade</h6>
-              <h6 className="mx-2 text-sm">Pools</h6>
-              <h6 className="mx-2 text-sm">Lend</h6>
-              <h6 className="mx-2 text-sm">Borrow</h6>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="flex font-['NexaTextBold']">
-              <div className="flex text-white mx-2 hidden md:flex">
-                <h5 className="text-sm">Blog</h5>
-                <div className="-mt-1 ml-1">
-                  <Image
-                    src="/assets/Vector.png"
-                    alt="Vector"
-                    width={8}
-                    height={8}
-                  />
-                </div>
-              </div>
-              <div className="flex text-white mx-2 hidden md:flex">
-                <h5 className="text-sm">Docs</h5>
-                <div className="-mt-1 ml-1">
-                  <Image
-                    src="/assets/Vector.png"
-                    alt="Vector"
-                    width={8}
-                    height={8}
-                  />
-                </div>
-              </div>
-              <div className="flex text-white mx-2 hidden md:flex">
-                <h5 className="text-sm">Analytics</h5>
-                <div className="-mt-1 ml-1">
-                  <Image
-                    src="/assets/Vector.png"
-                    alt="Vector"
-                    width={8}
-                    height={8}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="ml-4 hidden md:block">
-              <button className="bg-[#10D281] px-4 py-1 text-sm rounded-lg font-['NexaTextBlack']">
-                Enter App
-              </button>
-            </div>
-            <div className="ml-4 z-[50]">
-              <div className="inline-block mt-1 hamburger" ref={hamburger} onClick={showMenu}>
-                <div className="w-[25px] h-[2px] bg-white my-2 bar1"></div>
-                <div className="w-[25px] h-[2px] bg-white my-2 bar2"></div>
-                <div className="w-[25px] h-[2px] bg-white my-2 bar3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center text-white pt-20">
+        <Navbar showMenu={showMenu}/>
+        <div className="flex flex-col justify-center items-center text-white pt-32">
           <div>
             <Image
               src="/assets/logo_big.png"
@@ -339,7 +272,7 @@ export default function Home() {
             <h1 className="mx-2 font-['NexaTextBold'] text-sm">Total Pairs</h1>
             <h1 className="text-4xl font-['NexaTextBlack'] mx-2">2,635</h1>
           </div>
-          <div className="flex justify-between py-8 px-4 mt-0.5 items-center w-full md:w-1/2 xl:w-1/5 bg-[#10D281]">
+          <div className="flex justify-between py-8 px-4 mt-0.5 items-center w-full md:w-1/2 xl:w-1/5 border-r-black border-r-2 bg-[#10D281]">
             <div className="font-['NexaTextBold'] text-sm">
               <h1 className="mx-2">Supported</h1>
               <h1 className="mx-2">Blockchains</h1>
@@ -360,65 +293,11 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex justify-center mt-20 flex-wrap">
-          <div className="flex w-[300px] h-[250px] relative m-2 px-8 pt-8 items-center flex-col bg-[#202231] rounded-lg">
-            <h1 className="text-white font-['NexaTextBold']">
-              Multi-chain AMM
-            </h1>
-            <h1 className="text-white text-sm mt-2 text-center font-['NexaTextLight']">
-              The lowest rates for DeFi tokens anywhere. Switch to any
-              blockchains in one click.
-            </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
-              Enter Exchange
-            </button>
-          </div>
-          <div className="flex w-[300px] h-[250px] relative m-2 px-8 pt-8 items-center flex-col bg-[#202231] rounded-lg">
-            <h1 className="text-white font-['NexaTextBold'] text-center">
-              Grape Lending &amp; Leverage
-            </h1>
-            <h1 className="text-white text-sm mt-2 text-center font-['NexaTextLight']">
-              Isolated lending markets, elastic interest rates,Leverage long
-              short or create your own market.
-            </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
-              Enter Grape
-            </button>
-          </div>
-          <div className="flex w-[300px] h-[250px] relative m-2 px-8 pt-8 items-center flex-col bg-[#202231] rounded-lg">
-            <h1 className="text-white font-['NexaTextBold']">Cellar dApps</h1>
-            <h1 className="text-white text-sm mt-2 text-center font-['NexaTextLight']">
-              An innovative ecosystem to use dapps gas-efficiently and gain
-              extra yield. Onchain min dapps.
-            </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
-              Enter Cellar
-            </button>
-          </div>
-          <div className="flex w-[300px] h-[250px] relative m-2 px-8 pt-8 items-center flex-col bg-[#202231] rounded-lg">
-            <h1 className="text-white font-['NexaTextBold']">
-              Cristal staking
-            </h1>
-            <h1 className="text-white text-sm mt-2 text-center font-['NexaTextLight']">
-              Earn government rights and 0.05% of all swaps from all chains in
-              one simple place.
-            </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
-              Enter Cellar
-            </button>
-          </div>
-          <div className="flex w-[300px] h-[250px] relative m-2 px-8 pt-8 items-center flex-col bg-[#202231] rounded-lg">
-            <h1 className="text-white font-['NexaTextBold']">
-              Champagne Program
-            </h1>
-            <h1 className="text-white text-sm mt-2 text-center font-['NexaTextLight']">
-              Earn Champagne Bottles, once ChampagneSwap reached a marketcap on
-              the coin of 1 Billion, it will create the worlds first DeFi
-              Champagne in Champagne(France)
-            </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
-              Coming Soon
-            </button>
-          </div>
+          {
+            card_data.map((item, index) => 
+              <Card title={item.title} content={item.content} btn={item.btn} key={index}/>
+            )
+          }
         </div>
         <div className="text-white mt-32">
           <h1 className="text-3xl text-center font-['NexaTextBold']">
@@ -429,73 +308,11 @@ export default function Home() {
           </h1>
         </div>
         <div className="mt-16 flex justify-center flex-wrap">
-          <div className="flex flex-col items-center w-[260px] h-[250px] py-8 bg-[#202231] m-2 rounded-lg">
-            <div>
-              <Image
-                src="/assets/wallet.png"
-                alt="wallet"
-                width={120}
-                height={120}
-              />
-            </div>
-            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
-              20+
-            </h1>
-            <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
-              Wallet Supported
-            </h1>
-          </div>
-          <div className="flex flex-col items-center w-[260px] h-[250px] pt-8 bg-[#202231] m-2 rounded-lg">
-            <div>
-              <Image
-                src="/assets/blockchain.png"
-                alt="wallet"
-                width={120}
-                height={120}
-              />
-            </div>
-            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
-              14
-            </h1>
-            <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
-              Chains Supported
-            </h1>
-            <h1 className="text-white font-['NexaTextLight'] text-sm text-center">
-              (BSC is first)
-            </h1>
-          </div>
-          <div className="flex flex-col items-center w-[260px] h-[250px] py-8 bg-[#202231] m-2 rounded-lg">
-            <div>
-              <Image
-                src="/assets/discord.png"
-                alt="wallet"
-                width={120}
-                height={120}
-              />
-            </div>
-            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
-              10k+
-            </h1>
-            <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
-              Discord Members
-            </h1>
-          </div>
-          <div className="flex flex-col items-center w-[260px] h-[250px] py-8 bg-[#202231] m-2 rounded-lg">
-            <div>
-              <Image
-                src="/assets/logo3.png"
-                alt="wallet"
-                width={120}
-                height={120}
-              />
-            </div>
-            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
-              10k+
-            </h1>
-            <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
-              Champagne Holders
-            </h1>
-          </div>
+          {
+            imagecard_data.map((item, index) => 
+              <ImageCard title={item.title} content={item.content} content1={item.content1} src={item.src} key={index}/>
+            )
+          }
         </div>
         <div className="text-white mt-20">
           <h1 className="text-3xl text-center font-['NexaTextBold']">
@@ -510,32 +327,8 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center">
           <div className="w-full">
             <div className="mt-20 flex justify-center flex-col md:flex-row items-center px-2">
-              <div className="flex flex-col items-center w-full mx-2 mt-2 md:w-[500px] py-5 bg-fuchsia-800 rounded-lg">
-                <h1 className="text-5xl font-['NexaTextBlack'] text-center mt-4">
-                  Earn
-                </h1>
-                <h1 className="text-5xl font-bold text-center mt-8">
-                  <span className="font-['NexaTextBlack']">0.25%</span>
-                </h1>
-                <h1 className="font-['NexaTextBold'] text-center">Per Trade</h1>
-                <button className="bg-black text-white rounded-md font-bold text-sm mt-8 mb-4 py-2 px-5">
-                  Add Liquidity
-                </button>
-              </div>
-              <div className="flex flex-col items-center w-full mx-2 mt-2 md:w-[500px] py-5 bg-[#10D281] rounded-lg">
-                <h1 className="text-5xl font-['NexaTextBlack'] text-center mt-4">
-                  Gain
-                </h1>
-                <h1 className="text-5xl font-bold text-center mt-8">
-                  <span className="font-['NexaTextBlack']">0.05%</span>
-                </h1>
-                <h1 className="font-['NexaTextBlack'] text-center">
-                  Per Trade in Cristal Coins
-                </h1>
-                <button className="bg-black text-white rounded-md font-bold text-sm mt-8 mb-4 py-2 px-5">
-                  Add Liquidity
-                </button>
-              </div>
+              <EarnCard />
+              <GainCard />
             </div>
           </div>
           <div className="w-full max-w-[1050px] px-2 md:px-4">
@@ -558,88 +351,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="bg-[#161522] py-20 flex justify-center hidden sm:flex">
-        <div className="flex flex-col mx-6">
-          <div className="flex items-center">
-            <div>
-              <Image
-                src="/assets/logo.png"
-                alt="Vercel Logo"
-                width={40}
-                height={40}
-              />
-            </div>
-            <h1 className="mx-2 text-white">ChampagneSwap</h1>
-          </div>
-          <h1 className="text-white font-['NexaTextLight'] mt-3">
-            ChampagneSwap is the home of DeFi.
-          </h1>
-          <h1 className="text-white font-['NexaTextLight']">
-            Our community is the foremost
-          </h1>
-          <h1 className="text-white font-['NexaTextLight']">
-            technologically beneficial platform for the
-          </h1>
-          <h1 className="text-white font-['NexaTextLight']">future of DeFi!</h1>
-          <h1 className="text-white font-['NexaTextLight']">Join us!</h1>
-          <div className="mt-4 flex">
-            <div className="flex items-center">
-              <Image
-                src="/assets/Vector4.png"
-                alt="Vector4"
-                width={24}
-                height={24}
-              />
-            </div>
-            <div className="flex items-center ml-6">
-              <Image
-                src="/assets/Vector1.png"
-                alt="Vector(1)"
-                width={20}
-                height={20}
-              />
-            </div>
-            <div className="flex items-center ml-6">
-              <Image
-                src="/assets/Vector2.png"
-                alt="Vector(1)"
-                width={20}
-                height={20}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col mx-6">
-          <h1 className="text-white mt-2">PRODUCTS</h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">
-            ChampagneSwap AMM
-          </h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">
-            Cellar Dapps
-          </h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">
-            Grape Lending
-          </h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">
-            API(Coming Soon)
-          </h1>
-        </div>
-        <div className="flex flex-col mx-6">
-          <h1 className="text-white mt-2">SUPPORT</h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">Tutorials</h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">
-            Documentation
-          </h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">Discord</h1>
-        </div>
-        <div className="flex flex-col mx-6">
-          <h1 className="text-white mt-2">PROTOCOL</h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">Vote</h1>
-          <h1 className="text-white font-['NexaTextLight'] mt-4">
-            Create a Pair
-          </h1>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
