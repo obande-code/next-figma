@@ -13,7 +13,7 @@ export default function Navbar({ showMenu }) {
     showMenu();
   };
   return (
-    <div className="flex flex-row justify-between p-4 fixed w-full z-[9] bg-black">
+    <div className="flex flex-row justify-between p-4 fixed sm:relative w-full z-[9] bg-black sm:bg-transparent">
       <div className="flex flex-row items-center">
         <div className="flex justify-center items-center">
           <div>
