@@ -4,16 +4,23 @@
 
 @font-face {
   font-family: "NexaTextLight";
-  src: url("/font/NexaTextDemo-Light.ttf");
+  src: url("/Fonts/Nexa-Light.ttf");
 }
 
 @font-face {
   font-family: "NexaTextBold";
-  src: url("/font/NexaTextDemo-Bold.ttf");
-  font-weight: 900;
+  src: url("/Fonts/Nexa-Bold.ttf");
+}
+@font-face {
+  font-family: "NexaTextBlack";
+  src: url("/Fonts/Nexa-Black.ttf");
+}
+@font-face {
+  font-family: "NexaTextHeavy";
+  src: url("/Fonts/Nexa-Heavy.ttf");
 }
 .font-gradient {
-  background: -webkit-linear-gradient(#a5deff, #0a1752);
+  background: -webkit-linear-gradient(0deg,#b0d2e6, #0770a9 120%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;

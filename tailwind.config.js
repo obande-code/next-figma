@@ -7,7 +7,9 @@ module.exports = {
     extend: {},
     fontFamily: {
       'NextTextBold': ['NextTextBold'],
+      'NextTextBlack': ['NextTextBlack'],
       'NextTextLight': ['NextTextLight'],
+      'NextTextHeavy': ['NextTextHeavy'],
     }
   },
   plugins: [],

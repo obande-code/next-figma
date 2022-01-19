@@ -216,7 +216,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-gradient-to-r from-black to-indigo-800">
-        <div className="flex flex-row justify-between p-4">
+        <div className="flex flex-row justify-between p-4 fixed w-full z-[9]">
           <div className="flex flex-row items-center">
             <div className="flex justify-center items-center">
               <div>
@@ -227,9 +227,9 @@ export default function Home() {
                   height={40}
                 />
               </div>
-              <h4 className="mx-1 text-white">ChampagneSwap</h4>
+              <h4 className="mx-1 text-white font-['NexaTextBold']">ChampagneSwap</h4>
             </div>
-            <div className="flex text-white ml-4 font-['NexaTextLight']">
+            <div className="flex text-white ml-4 font-['NexaTextBold'] lg:flex hidden">
               <h6 className="mx-2 text-sm">Swap</h6>
               <h6 className="mx-2 text-sm">Trade</h6>
               <h6 className="mx-2 text-sm">Pools</h6>
@@ -238,8 +238,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center">
-            <div className="flex font-['NexaTextLight']">
-              <div className="flex text-white mx-2">
+            <div className="flex font-['NexaTextBold']">
+              <div className="flex text-white mx-2 hidden md:flex">
                 <h5 className="text-sm">Blog</h5>
                 <div className="-mt-1 ml-1">
                   <Image
@@ -250,7 +250,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex text-white mx-2">
+              <div className="flex text-white mx-2 hidden md:flex">
                 <h5 className="text-sm">Docs</h5>
                 <div className="-mt-1 ml-1">
                   <Image
@@ -261,7 +261,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex text-white mx-2">
+              <div className="flex text-white mx-2 hidden md:flex">
                 <h5 className="text-sm">Analytics</h5>
                 <div className="-mt-1 ml-1">
                   <Image
@@ -273,8 +273,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="ml-4">
-              <button className="bg-[#10D281] px-4 py-1 text-sm rounded-lg font-['NexaTextBold']">
+            <div className="ml-4 hidden md:block">
+              <button className="bg-[#10D281] px-4 py-1 text-sm rounded-lg font-['NexaTextBlack']">
                 Enter App
               </button>
             </div>
@@ -287,7 +287,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center text-white">
+        <div className="flex flex-col justify-center items-center text-white pt-20">
           <div>
             <Image
               src="/assets/logo_big.png"
@@ -297,7 +297,7 @@ export default function Home() {
             />
           </div>
           <h1 className="text-5xl font-['NexaTextBold'] mt-5 text-center">
-            Automated <span className="font-gradient">DeFi</span> made simple
+            Automated <span className="font-gradient font-['NexaTextHeavy']">DeFi</span> made simple
           </h1>
           <h1 className="mt-6 font-['NexaTextLight'] text-center">
             Light-speed <span className="font-['NexaTextBold']">Swaps</span>,
@@ -312,39 +312,39 @@ export default function Home() {
             <span className="font-['NexaTextBold']">Staking</span>.
           </h1>
           <div className="flex mt-6">
-            <button className="bg-[#10D281] px-6 py-1.5 rounded-lg text-black font-['NexaTextBold'] mx-2">
+            <button className="bg-[#10D281] px-6 py-1.5 rounded-lg text-black font-['NexaTextBlack'] mx-2">
               Enter App
             </button>
-            <button className="bg-[#202231] px-6 py-1.5 rounded-lg font-['NexaTextBold'] mx-2">
+            <button className="bg-[#202231] px-6 py-1.5 rounded-lg font-['NexaTextBlack'] mx-2">
               Learn More
             </button>
           </div>
         </div>
         <div className="flex mt-16 w-full flex-wrap justify-center">
-          <div className="flex justify-between py-8 px-4 mt-1 items-center w-1/5 min-w-[300px] border-r-black border-r-2 bg-[#10D281]">
+          <div className="flex justify-between py-8 px-4 mt-0.5 items-center w-full sm:w-1/2 md:w-1/3 xl:w-1/5 border-r-black border-r-2 bg-[#10D281]">
             <h1 className="mx-2 font-['NexaTextBold'] text-sm">$CHAM Price</h1>
-            <h1 className="text-4xl font-['NexaTextBold'] mx-2">$0.43</h1>
+            <h1 className="text-4xl font-['NexaTextBlack'] mx-2">$0.43</h1>
           </div>
-          <div className="flex justify-between py-8 px-4 mt-1 items-center w-1/5 min-w-[300px] border-r-black border-r-2 bg-[#10D281]">
+          <div className="flex justify-between py-8 px-4 mt-0.5 items-center w-full sm:w-1/2 md:w-1/3 xl:w-1/5 border-r-black border-r-2 bg-[#10D281]">
             <h1 className="mx-2 font-['NexaTextBold'] text-sm">
               Total Liquidity
             </h1>
-            <h1 className="text-4xl font-['NexaTextBold'] mx-2">$150M</h1>
+            <h1 className="text-4xl font-['NexaTextBlack'] mx-2">$150M</h1>
           </div>
-          <div className="flex justify-between py-8 px-4 mt-1 items-center w-1/5 min-w-[300px] border-r-black border-r-2 bg-[#10D281]">
+          <div className="flex justify-between py-8 px-4 mt-0.5 items-center w-full sm:w-1/2 md:w-1/3 xl:w-1/5 border-r-black border-r-2 bg-[#10D281]">
             <h1 className="mx-2 font-['NexaTextBold'] text-sm">Total Volume</h1>
-            <h1 className="text-4xl font-['NexaTextBold'] mx-2">$16.92B</h1>
+            <h1 className="text-4xl font-['NexaTextBlack'] mx-2">$16.92B</h1>
           </div>
-          <div className="flex justify-between py-8 px-4 mt-1 items-center w-1/5 min-w-[300px] border-r-black border-r-2 bg-[#10D281]">
+          <div className="flex justify-between py-8 px-4 mt-0.5 items-center w-full sm:w-1/2 md:w-1/2 xl:w-1/5 border-r-black border-r-2 bg-[#10D281]">
             <h1 className="mx-2 font-['NexaTextBold'] text-sm">Total Pairs</h1>
-            <h1 className="text-4xl font-['NexaTextBold'] mx-2">2,635</h1>
+            <h1 className="text-4xl font-['NexaTextBlack'] mx-2">2,635</h1>
           </div>
-          <div className="flex justify-between py-8 px-4 mt-1 items-center w-1/5 min-w-[300px] bg-[#10D281]">
+          <div className="flex justify-between py-8 px-4 mt-0.5 items-center w-full md:w-1/2 xl:w-1/5 bg-[#10D281]">
             <div className="font-['NexaTextBold'] text-sm">
               <h1 className="mx-2">Supported</h1>
               <h1 className="mx-2">Blockchains</h1>
             </div>
-            <h1 className="text-4xl font-['NexaTextBold'] mx-2">14</h1>
+            <h1 className="text-4xl font-['NexaTextBlack'] mx-2">14</h1>
           </div>
         </div>
       </div>
@@ -354,9 +354,9 @@ export default function Home() {
             Celebrate your victories with earnings and
           </h1>
           <h1 className="text-2xl text-center text-white font-['NexaTextLight']">
-            start <span className="font-['NexaTextBold']">staking</span> and{" "}
-            <span className="font-['NexaTextBold']">spraying</span> with{" "}
-            <span className="font-['NexaTextBold']">Champagne</span>
+            start <span className="font-['NexaTextBlack']">staking</span> and{" "}
+            <span className="font-['NexaTextBlack']">spraying</span> with{" "}
+            <span className="font-['NexaTextBlack']">Champagne</span>
           </h1>
         </div>
         <div className="flex justify-center mt-20 flex-wrap">
@@ -368,7 +368,7 @@ export default function Home() {
               The lowest rates for DeFi tokens anywhere. Switch to any
               blockchains in one click.
             </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBold'] mx-2">
+            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
               Enter Exchange
             </button>
           </div>
@@ -380,7 +380,7 @@ export default function Home() {
               Isolated lending markets, elastic interest rates,Leverage long
               short or create your own market.
             </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBold'] mx-2">
+            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
               Enter Grape
             </button>
           </div>
@@ -390,7 +390,7 @@ export default function Home() {
               An innovative ecosystem to use dapps gas-efficiently and gain
               extra yield. Onchain min dapps.
             </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBold'] mx-2">
+            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
               Enter Cellar
             </button>
           </div>
@@ -402,7 +402,7 @@ export default function Home() {
               Earn government rights and 0.05% of all swaps from all chains in
               one simple place.
             </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBold'] mx-2">
+            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
               Enter Cellar
             </button>
           </div>
@@ -415,17 +415,17 @@ export default function Home() {
               the coin of 1 Billion, it will create the worlds first DeFi
               Champagne in Champagne(France)
             </h1>
-            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBold'] mx-2">
+            <button className="bg-[#10D281] absolute bottom-0 mb-2 mt-4 py-2 px-3 rounded-lg text-black font-['NexaTextBlack'] mx-2">
               Coming Soon
             </button>
           </div>
         </div>
         <div className="text-white mt-32">
-          <h1 className="text-3xl text-center font-['NexaTextLight']">
+          <h1 className="text-3xl text-center font-['NexaTextBold']">
             An evolving community for an evolving
           </h1>
-          <h1 className="text-3xl text-center font-['NexaTextLight']">
-            <span className="font-['NexaTextBold']">DeFi</span> landscape.
+          <h1 className="text-3xl text-center font-['NexaTextBold']">
+            <span className="font-['NexaTextBlack']">DeFi</span> landscape.
           </h1>
         </div>
         <div className="mt-16 flex justify-center flex-wrap">
@@ -438,7 +438,7 @@ export default function Home() {
                 height={120}
               />
             </div>
-            <h1 className="text-white font-['NexaTextBold'] text-center text-3xl">
+            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
               20+
             </h1>
             <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
@@ -454,7 +454,7 @@ export default function Home() {
                 height={120}
               />
             </div>
-            <h1 className="text-white font-['NexaTextBold'] text-center text-3xl">
+            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
               14
             </h1>
             <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
@@ -473,7 +473,7 @@ export default function Home() {
                 height={120}
               />
             </div>
-            <h1 className="text-white font-['NexaTextBold'] text-center text-3xl">
+            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
               10k+
             </h1>
             <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
@@ -489,7 +489,7 @@ export default function Home() {
                 height={120}
               />
             </div>
-            <h1 className="text-white font-['NexaTextBold'] text-center text-3xl">
+            <h1 className="text-white font-['NexaTextBlack'] text-center text-3xl">
               10k+
             </h1>
             <h1 className="text-white font-['NexaTextLight'] text-sm mt-2 text-center">
@@ -498,52 +498,52 @@ export default function Home() {
           </div>
         </div>
         <div className="text-white mt-20">
-          <h1 className="text-3xl text-center font-['NexaTextLight']">
+          <h1 className="text-3xl text-center font-['NexaTextBold']">
             Make money on your{" "}
-            <span className="font-['NexaTextBold']">Crypto</span> with
+            <span className="font-['NexaTextBlack']">Crypto</span> with
           </h1>
-          <h1 className="text-3xl text-center font-['NexaTextLight']">
-            <span className="font-['NexaTextBold']">ChampagneSwap</span> and{" "}
-            <span className="font-['NexaTextBold']">Celebrate</span>
+          <h1 className="text-3xl text-center font-['NexaTextBold']">
+            <span className="font-['NexaTextBlack']">ChampagneSwap</span> and{" "}
+            <span className="font-['NexaTextBlack']">Celebrate</span>
           </h1>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="max-w-[1300px] w-full">
-            <div className="mt-20 flex justify-center">
-              <div className="flex flex-col items-center w-1/2 py-5 bg-fuchsia-800 rounded-lg mr-2">
-                <h1 className="text-5xl font-['NexaTextBold'] text-center mt-4">
+          <div className="w-full">
+            <div className="mt-20 flex justify-center flex-col md:flex-row items-center px-2">
+              <div className="flex flex-col items-center w-full mx-2 mt-2 md:w-[500px] py-5 bg-fuchsia-800 rounded-lg">
+                <h1 className="text-5xl font-['NexaTextBlack'] text-center mt-4">
                   Earn
                 </h1>
-                <h1 className="text-5xl font-bold text-center mt-3 mt-8">
-                  <span className="font-['NexaTextBold']">0.25</span>%
+                <h1 className="text-5xl font-bold text-center mt-8">
+                  <span className="font-['NexaTextBlack']">0.25%</span>
                 </h1>
                 <h1 className="font-['NexaTextBold'] text-center">Per Trade</h1>
                 <button className="bg-black text-white rounded-md font-bold text-sm mt-8 mb-4 py-2 px-5">
                   Add Liquidity
                 </button>
               </div>
-              <div className="flex flex-col items-center w-1/2 py-5 bg-[#10D281] rounded-lg ml-2">
-                <h1 className="text-5xl font-['NexaTextBold'] text-center mt-4">
+              <div className="flex flex-col items-center w-full mx-2 mt-2 md:w-[500px] py-5 bg-[#10D281] rounded-lg">
+                <h1 className="text-5xl font-['NexaTextBlack'] text-center mt-4">
                   Gain
                 </h1>
                 <h1 className="text-5xl font-bold text-center mt-8">
-                  <span className="font-['NexaTextBold']">0.05</span>%
+                  <span className="font-['NexaTextBlack']">0.05%</span>
                 </h1>
-                <h1 className="font-['NexaTextBold'] text-center">
+                <h1 className="font-['NexaTextBlack'] text-center">
                   Per Trade in Cristal Coins
                 </h1>
-                <button className="bg-black text-white rounded-md font-bold text-sm mt-8 mt-4 py-2 px-5">
+                <button className="bg-black text-white rounded-md font-bold text-sm mt-8 mb-4 py-2 px-5">
                   Add Liquidity
                 </button>
               </div>
             </div>
           </div>
-          <div className="max-w-[1300px] w-full">
-            <div className="mt-4 bg-cover bg-[url('/assets/Rectangle4.png')] rounded-[12px] flex px-16 py-16 justify-between items-center">
-              <h1 className="text-4xl w-1/4 font-['NexaTextBold'] leading-normal">
+          <div className="w-full max-w-[1050px] px-2 md:px-4">
+            <div className="mt-4 bg-cover bg-[url('/assets/Rectangle4.png')] rounded-[12px] flex flex-col sm:flex-row px-16 py-16 justify-between items-center">
+              <h1 className="text-4xl w-full sm:w-1/4 font-['NexaTextBlack'] leading-normal">
                 Learn how to DeFi?
               </h1>
-              <div className="ml-6 w-3/4">
+              <div className="ml-0 sm:ml-6 w-full sm:w-3/4">
                 <h1 className="font-['NexaTextBold']">
                   Check our guides to learn how to do Swap, add Liquidity,
                   install a Wallet to start trading. Learn how to Borrow Crypto
@@ -558,7 +558,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="bg-[#161522] py-20 flex justify-center">
+      <footer className="bg-[#161522] py-20 flex justify-center hidden sm:flex">
         <div className="flex flex-col mx-6">
           <div className="flex items-center">
             <div>
